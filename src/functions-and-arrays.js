@@ -40,23 +40,52 @@ return longestWord
 
 }
 
-console.log(findLongestWord(words))
+console.log(`the longest word is ${findLongestWord(words)}`)
 
 // empty array returns null
-console.log(findLongestWord(emptyArr))
+console.log(`this is an empty array so... ${findLongestWord(emptyArr)}`)
+
+
+
 
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbArray) { // numb is for numbers xd
+    let sum = 0
+
+    for (let i = 0; i < numbArray.length; i++) {
+
+        sum += numbArray[i] // this adds and sum every element of the array to they new variable sum
+    }
+
+    return sum
+
+}
+
+console.log(`the sum of the numbers in the array is ${sumNumbers(numbers)}`)
 
 
 
 
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
+const numbers3 = []
 
-function averageNumbers() {}
+function averageNumbers(numbAverage) {
+
+    if (numbAverage.length === 0) {
+        return 0;
+    }
+
+    let average = sumNumbers(numbAverage) / numbAverage.length;
+
+    return average
+
+}
+
+console.log(`the average of these numbers is ${averageNumbers(numbers2)}`)
+console.log(`the average of these numbers is ${averageNumbers(numbers3)}`)
 
 
 
