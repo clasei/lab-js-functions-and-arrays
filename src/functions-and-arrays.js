@@ -75,7 +75,7 @@ const numbers3 = []
 function averageNumbers(numbAverage) {
 
     if (numbAverage.length === 0) {
-        return 0;
+        return 0
     }
 
     let average = sumNumbers(numbAverage) / numbAverage.length;
@@ -93,4 +93,23 @@ console.log(`the average of these numbers is ${averageNumbers(numbers3)}`)
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
-function doesWordExist() {}
+function doesWordExist(possibleWords, searchedWord) {
+
+    if (possibleWords.length === 0) {
+        return null
+    }
+
+    if (possibleWords.includes(searchedWord)) {
+        return true
+    }
+
+    else {
+        return false
+    }
+        
+}
+
+let searchedWord = "subset"
+
+
+console.log(`${searchedWord} exists in the array: ${doesWordExist(words2, searchedWord)}`)
